@@ -42,8 +42,7 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
 
-        {% if page.doi %}<div><a href="https://doi.org/{{ page.doi }}" class="btn">{{ site.data.ui-text[site.locale].doi_link_label | default: "DOI" }}</a></div>{% endif %}
-        </p>
+        {% if page.doi %}<div><a href="https://doi.org/{{ page.doi }}" class="btn">{{ site.data.ui-text[site.locale].doi_link_label | default: "DOI" }}</a></p></div>{% endif %}
         </header>
       {% endunless %}
 
